@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/estilo.css">
+    <title>{{ Titulo }}</title>
+</head>
+<body>
+
+    <h1>{{ Titulo }}</h1>
+     {% for gatos in lista %}
+        <div class="card">
+            <h3>{{gatos[1]}}</h3>
+            <img src="{{ gatos[5] }}">
+            <p>Tipo: {{ gatos[2] }}</p>
+            <p>Altura: {{ gatos[3] }}</p>
+            <p>Peso: {{ gatos[4] }}</p>
+        </div>
+     {% endfor %}
+    <div>
+    <a href="/">Voltar à Página Inicial</a>
+    </div>
+</body>
+</html>
